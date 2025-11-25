@@ -6,7 +6,7 @@
 /*   By: danz <danz@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 15:40:29 by danz              #+#    #+#             */
-/*   Updated: 2025/11/22 01:02:08 by danz             ###   ########.fr       */
+/*   Updated: 2025/11/25 19:20:39 by danz             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ t_list	*pars(char *filename);
 void	free_point(void *point);
 short	save_iso(t_list *coords);
 short	save_conic(t_list *coords);
-void	save_osd(t_list *coords);
+void	save_osd(t_fdf *fdf);
 void	put_pixels(t_fdf fdf);
 void	put_pixel(int x, int y, int color, t_fdf fdf);
 int		lerp(t_point p0, t_point p1, int pos[2]);

@@ -6,13 +6,12 @@
 /*   By: danz <danz@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 13:05:02 by danz              #+#    #+#             */
-/*   Updated: 2025/11/22 02:15:36 by danz             ###   ########.fr       */
+/*   Updated: 2025/11/25 19:21:27 by danz             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mlx.h"
 #include "fdf.h"
-#include "stdio.h"
 
 #ifdef __APPLE__
 # define ESC_KEY 53

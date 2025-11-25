@@ -6,7 +6,7 @@
 /*   By: danz <danz@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 23:23:41 by danz              #+#    #+#             */
-/*   Updated: 2025/11/21 19:05:49 by danz             ###   ########.fr       */
+/*   Updated: 2025/11/25 20:36:45 by danz             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ static short	save_point(char **buf, t_point *point, int *p_l)
 	point->coords = new;
 	new->matrix[0][0] = (float)p_l[0];
 	new->matrix[1][0] = (float)p_l[1];
-	new->matrix[2][0] = (float)atoi(*buf);
+	new->matrix[2][0] = (float)ft_atoi(*buf) / 2;
 	new->matrix[3][0] = 1;
 	while (**buf >= '0' && **buf <= '9')
 		(*buf)++;

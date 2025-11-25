@@ -6,7 +6,7 @@ INC_DIR = inc
 INCLUDE = -I $(INC_DIR) -I libft/inc -I minilibx-linux
 OBJ_DIR = obj
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -g3 -D BUFFER_SIZE=1000
+CFLAGS = -Wall -Wextra -Werror -Ofast -D BUFFER_SIZE=1000
 RM = rm -rf
 AR = ar rcs
 

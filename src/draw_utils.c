@@ -6,7 +6,7 @@
 /*   By: danz <danz@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 14:17:05 by danz              #+#    #+#             */
-/*   Updated: 2025/11/22 02:15:08 by danz             ###   ########.fr       */
+/*   Updated: 2025/11/25 19:02:09 by danz             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	put_pixel(int x, int y, int color, t_fdf fdf)
 {
 	int	pos;
 
+	if (x >= IMG_WID || y >= IMG_HGT || x < 0 || y < 0)
+		return ;
 	pos = fdf.size_line * y + x * (fdf.bpp / 8);
 	*(unsigned int *)(fdf.addr + pos) = color;
 }
