@@ -6,7 +6,7 @@
 /*   By: danz <danz@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 15:47:40 by danz              #+#    #+#             */
-/*   Updated: 2025/11/25 20:34:40 by danz             ###   ########.fr       */
+/*   Updated: 2025/11/25 23:36:19 by danz             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,15 +93,16 @@ static void	apply_scale_offset(t_list *coords, int range_x[2],
 
 void	save_osd(t_fdf *fdf)
 {
-	t_list	*coords;
-	t_point	*cur;
-	int		range_x[2];
-	int		range_y[2];
-	float	scale;
+	t_list			*coords;
+	t_point			*cur;
+	int				range_x[2];
+	int				range_y[2];
+	static float	scale;
 
 	coords = fdf->coords;
 	get_ranges(coords, range_x, range_y);
-	scale = calculate_scale(range_x, range_y);
+	if (!scale)
+		scale = calculate_scale(range_x, range_y);
 	apply_scale_offset(coords, range_x, range_y, scale);
 	while (coords)
 	{

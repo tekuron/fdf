@@ -6,7 +6,7 @@
 /*   By: danz <danz@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 18:31:50 by danzamor          #+#    #+#             */
-/*   Updated: 2025/11/22 01:11:53 by danz             ###   ########.fr       */
+/*   Updated: 2025/11/25 23:44:16 by danz             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,6 @@ t_matrix	*matrix_rotation_z(float theta);
 t_matrix	*matrix_rotation_full(float theta_x, float theta_y, float theta_z);
 t_matrix	*matrix_scale(float sx, float sy, float sz);
 t_matrix	*matrix_isometric_projection(void);
-t_matrix	*matrix_perspective_projection(void);
+t_matrix	*matrix_cavalier_projection(void);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: danz <danz@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 15:40:29 by danz              #+#    #+#             */
-/*   Updated: 2025/11/25 19:20:39 by danz             ###   ########.fr       */
+/*   Updated: 2025/11/25 23:35:41 by danz             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 
 # define WIN_WID 1920
 # define WIN_HGT 1080
-# define IMG_WID (WIN_WID - WIN_WID / 5)
+# define IMG_WID 1920
 # define IMG_HGT 1080
 
 # define ISOMETRIC 0

@@ -6,7 +6,7 @@
 /*   By: danz <danz@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 13:40:21 by danz              #+#    #+#             */
-/*   Updated: 2025/11/25 19:07:13 by danz             ###   ########.fr       */
+/*   Updated: 2025/11/25 23:44:16 by danz             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 static t_matrix	*get_projection_matrix(int projection_type)
 {
 	if (projection_type == PERSPECTIVE)
-		return (matrix_perspective_projection());
+		return (matrix_cavalier_projection());
 	else
 		return (matrix_isometric_projection());
 }

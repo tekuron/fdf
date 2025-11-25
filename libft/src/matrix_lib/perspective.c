@@ -6,7 +6,7 @@
 /*   By: danz <danz@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 14:40:17 by danz              #+#    #+#             */
-/*   Updated: 2025/11/22 00:38:37 by danz             ###   ########.fr       */
+/*   Updated: 2025/11/25 23:44:16 by danz             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_matrix	*matrix_isometric_projection(void)
 	return (ret);
 }
 
-t_matrix	*matrix_perspective_projection(void)
+t_matrix	*matrix_cavalier_projection(void)
 {
 	t_matrix	*ret;
 	float	f;
