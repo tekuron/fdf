@@ -6,7 +6,7 @@
 /*   By: danz <danz@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 13:05:02 by danz              #+#    #+#             */
-/*   Updated: 2025/11/25 19:21:27 by danz             ###   ########.fr       */
+/*   Updated: 2025/11/26 12:48:45 by danz             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	cleanup_exit(t_fdf *fdf)
 	mlx_destroy_display(fdf->mlx);
 	free(fdf->mlx);
 	exit(0);
-	return(0);
+	return (0);
 }
 
 void	reset(t_fdf *fdf)

@@ -6,7 +6,7 @@
 /*   By: danz <danz@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 13:40:21 by danz              #+#    #+#             */
-/*   Updated: 2025/11/25 23:44:16 by danz             ###   ########.fr       */
+/*   Updated: 2025/11/26 12:49:27 by danz             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,15 +45,17 @@ void	apply_transformations(t_fdf *fdf)
 	t_matrix	*final_transform;
 
 	transform = matrix_rotation_full(fdf->rotation_x, fdf->rotation_y,
-		fdf->rotation_z);
-	projection = get_projection_matrix(fdf->projection_type);
-	if (!transform || !projection)
+			fdf->rotation_z);
+	if (!transform)
 		return ;
+	projection = get_projection_matrix(fdf->projection_type);
+	if (!projection)
+		return (free_matrix(transform));
 	final_transform = matrix_product(projection, transform);
+	free_matrix(transform);
+	free_matrix(projection);
 	if (!final_transform)
 		return ;
 	apply_matrix_to_points(fdf->coords, final_transform);
-	free_matrix(transform);
-	free_matrix(projection);
 	free_matrix(final_transform);
 }

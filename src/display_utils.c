@@ -6,7 +6,7 @@
 /*   By: danz <danz@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 15:47:40 by danz              #+#    #+#             */
-/*   Updated: 2025/11/25 23:36:19 by danz             ###   ########.fr       */
+/*   Updated: 2025/11/26 12:49:08 by danz             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void	get_ranges(t_list *coords, int range_x[2], int range_y[2])
 		if (!point || !point->iso_coords)
 		{
 			coords = coords->next;
-			continue;
+			continue ;
 		}
 		x = point->iso_coords->matrix[0][0];
 		y = point->iso_coords->matrix[1][0];
@@ -81,7 +81,7 @@ static void	apply_scale_offset(t_list *coords, int range_x[2],
 		if (!point || !point->iso_coords)
 		{
 			coords = coords->next;
-			continue;
+			continue ;
 		}
 		point->osd[0] = (int)((point->iso_coords->matrix[0][0]
 					- range_x[0]) * scale) + offset[0];

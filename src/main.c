@@ -6,7 +6,7 @@
 /*   By: danz <danz@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 00:09:30 by danz              #+#    #+#             */
-/*   Updated: 2025/11/25 20:18:49 by danz             ###   ########.fr       */
+/*   Updated: 2025/11/26 12:50:14 by danz             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,11 @@ int	render_frame(t_fdf *fdf)
 		ft_bzero(fdf->addr, IMG_WID * IMG_HGT * (fdf->bpp / 8));
 		if (!start)
 			save_prev(&fdf_prev, fdf);
-		if (fdf->rotation_x != fdf_prev.rotation_x ||
-			fdf->rotation_y != fdf_prev.rotation_y ||
-			fdf->rotation_z != fdf_prev.rotation_z ||
-			fdf->projection_type != fdf_prev.projection_type ||
-			!start)
+		if (fdf->rotation_x != fdf_prev.rotation_x
+			|| fdf->rotation_y != fdf_prev.rotation_y
+			|| fdf->rotation_z != fdf_prev.rotation_z
+			|| fdf->projection_type != fdf_prev.projection_type
+			|| !start)
 		{
 			apply_transformations(fdf);
 			save_osd(fdf);

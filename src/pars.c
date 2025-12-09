@@ -6,7 +6,7 @@
 /*   By: danz <danz@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 23:23:41 by danz              #+#    #+#             */
-/*   Updated: 2025/11/25 20:36:45 by danz             ###   ########.fr       */
+/*   Updated: 2025/11/26 12:51:33 by danz             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 #include "fdf_pars.h"
 #include "get_next_line.h"
 #include "mlx.h"
+#define C1 3018853
+#define C2 11640025
 
 static short	save_point(char **buf, t_point *point, int *p_l)
 {
@@ -37,7 +39,7 @@ static short	save_point(char **buf, t_point *point, int *p_l)
 			(*buf)++;
 	}
 	else
-		point->color = color_calc(0x2E1065, 0xB19CD9, point->coords->matrix[2][0] / 20);
+		point->color = color_calc(C1, C2, point->coords->matrix[2][0] / 20);
 	point->iso_coords = 0;
 	return (0);
 }
@@ -103,6 +105,8 @@ t_list	*pars(char *filename)
 	int		p_l[2];
 
 	fd = open(filename, O_RDONLY);
+	if (fd == -1)
+		return (NULL);
 	buf = get_next_line(fd);
 	p_l[1] = 1;
 	ret = 0;
